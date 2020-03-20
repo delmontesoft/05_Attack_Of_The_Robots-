@@ -28,16 +28,15 @@ public class CubeEditor : MonoBehaviour
     private void SnapCubeToGrid()
     {
         transform.position = new Vector3(
-            waypoint.GetGridPos().x,
+            waypoint.GetGridPos().x * waypoint.GetGridSize(),
             0f,
-            waypoint.GetGridPos().y);
+            waypoint.GetGridPos().y * waypoint.GetGridSize());
     }
 
     private void UpdateCubeLabel()
     {
-        int gridSize = waypoint.GetGridSize();
         string posText;
-        posText = waypoint.GetGridPos().x / gridSize + "," + waypoint.GetGridPos().y / gridSize;
+        posText = waypoint.GetGridPos().x + "," + waypoint.GetGridPos().y;
 
         TextMesh textMesh = GetComponentInChildren<TextMesh>();
         textMesh.text = posText;

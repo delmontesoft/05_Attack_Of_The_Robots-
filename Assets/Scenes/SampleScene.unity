@@ -130,12 +130,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2122736067, guid: 750ae61cb27215745b633a1e60c55063, type: 3}
       propertyPath: m_Text
-      value: (1,0)
+      value: 1,0
       objectReference: {fileID: 0}
     - target: {fileID: 4449351701431310970, guid: 750ae61cb27215745b633a1e60c55063,
         type: 3}
       propertyPath: m_Name
-      value: (1,0)
+      value: 1,0
       objectReference: {fileID: 0}
     - target: {fileID: 6510049687341138834, guid: 750ae61cb27215745b633a1e60c55063,
         type: 3}
@@ -209,12 +209,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2122736067, guid: 750ae61cb27215745b633a1e60c55063, type: 3}
       propertyPath: m_Text
-      value: (3,1)
+      value: 3,1
       objectReference: {fileID: 0}
     - target: {fileID: 4449351701431310970, guid: 750ae61cb27215745b633a1e60c55063,
         type: 3}
       propertyPath: m_Name
-      value: (3,1)
+      value: 3,1
       objectReference: {fileID: 0}
     - target: {fileID: 6510049687341138834, guid: 750ae61cb27215745b633a1e60c55063,
         type: 3}
@@ -288,12 +288,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2122736067, guid: 750ae61cb27215745b633a1e60c55063, type: 3}
       propertyPath: m_Text
-      value: (0,0)
+      value: 0,0
       objectReference: {fileID: 0}
     - target: {fileID: 4449351701431310970, guid: 750ae61cb27215745b633a1e60c55063,
         type: 3}
       propertyPath: m_Name
-      value: (0,0)
+      value: 0,0
       objectReference: {fileID: 0}
     - target: {fileID: 6510049687341138834, guid: 750ae61cb27215745b633a1e60c55063,
         type: 3}
@@ -367,12 +367,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2122736067, guid: 750ae61cb27215745b633a1e60c55063, type: 3}
       propertyPath: m_Text
-      value: (3,0)
+      value: 3,0
       objectReference: {fileID: 0}
     - target: {fileID: 4449351701431310970, guid: 750ae61cb27215745b633a1e60c55063,
         type: 3}
       propertyPath: m_Name
-      value: (3,0)
+      value: 3,0
       objectReference: {fileID: 0}
     - target: {fileID: 6510049687341138834, guid: 750ae61cb27215745b633a1e60c55063,
         type: 3}
@@ -458,12 +458,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2122736067, guid: 750ae61cb27215745b633a1e60c55063, type: 3}
       propertyPath: m_Text
-      value: (2,1)
+      value: 2,1
       objectReference: {fileID: 0}
     - target: {fileID: 4449351701431310970, guid: 750ae61cb27215745b633a1e60c55063,
         type: 3}
       propertyPath: m_Name
-      value: (2,1)
+      value: 2,1
       objectReference: {fileID: 0}
     - target: {fileID: 6510049687341138834, guid: 750ae61cb27215745b633a1e60c55063,
         type: 3}
@@ -653,12 +653,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2122736067, guid: 750ae61cb27215745b633a1e60c55063, type: 3}
       propertyPath: m_Text
-      value: (1,1)
+      value: 1,1
       objectReference: {fileID: 0}
     - target: {fileID: 4449351701431310970, guid: 750ae61cb27215745b633a1e60c55063,
         type: 3}
       propertyPath: m_Name
-      value: (1,1)
+      value: 1,1
       objectReference: {fileID: 0}
     - target: {fileID: 6510049687341138834, guid: 750ae61cb27215745b633a1e60c55063,
         type: 3}
@@ -732,12 +732,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2122736067, guid: 750ae61cb27215745b633a1e60c55063, type: 3}
       propertyPath: m_Text
-      value: (5,0)
+      value: 5,0
       objectReference: {fileID: 0}
     - target: {fileID: 4449351701431310970, guid: 750ae61cb27215745b633a1e60c55063,
         type: 3}
       propertyPath: m_Name
-      value: (5,0)
+      value: 5,0
       objectReference: {fileID: 0}
     - target: {fileID: 6510049687341138834, guid: 750ae61cb27215745b633a1e60c55063,
         type: 3}
@@ -894,12 +894,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2122736067, guid: 750ae61cb27215745b633a1e60c55063, type: 3}
       propertyPath: m_Text
-      value: (4,3)
+      value: 4,3
       objectReference: {fileID: 0}
     - target: {fileID: 4449351701431310970, guid: 750ae61cb27215745b633a1e60c55063,
         type: 3}
       propertyPath: m_Name
-      value: (4,3)
+      value: 4,3
       objectReference: {fileID: 0}
     - target: {fileID: 6510049687341138834, guid: 750ae61cb27215745b633a1e60c55063,
         type: 3}
@@ -997,12 +997,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2122736067, guid: 750ae61cb27215745b633a1e60c55063, type: 3}
       propertyPath: m_Text
-      value: (2,0)
+      value: 2,0
       objectReference: {fileID: 0}
     - target: {fileID: 4449351701431310970, guid: 750ae61cb27215745b633a1e60c55063,
         type: 3}
       propertyPath: m_Name
-      value: (2,0)
+      value: 2,0
       objectReference: {fileID: 0}
     - target: {fileID: 6510049687341138834, guid: 750ae61cb27215745b633a1e60c55063,
         type: 3}
@@ -1076,12 +1076,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2122736067, guid: 750ae61cb27215745b633a1e60c55063, type: 3}
       propertyPath: m_Text
-      value: (3,2)
+      value: 3,2
       objectReference: {fileID: 0}
     - target: {fileID: 4449351701431310970, guid: 750ae61cb27215745b633a1e60c55063,
         type: 3}
       propertyPath: m_Name
-      value: (3,2)
+      value: 3,2
       objectReference: {fileID: 0}
     - target: {fileID: 6510049687341138834, guid: 750ae61cb27215745b633a1e60c55063,
         type: 3}
@@ -1179,12 +1179,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2122736067, guid: 750ae61cb27215745b633a1e60c55063, type: 3}
       propertyPath: m_Text
-      value: (5,1)
+      value: 5,1
       objectReference: {fileID: 0}
     - target: {fileID: 4449351701431310970, guid: 750ae61cb27215745b633a1e60c55063,
         type: 3}
       propertyPath: m_Name
-      value: (5,1)
+      value: 5,1
       objectReference: {fileID: 0}
     - target: {fileID: 6510049687341138834, guid: 750ae61cb27215745b633a1e60c55063,
         type: 3}
@@ -1270,12 +1270,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2122736067, guid: 750ae61cb27215745b633a1e60c55063, type: 3}
       propertyPath: m_Text
-      value: (4,0)
+      value: 4,0
       objectReference: {fileID: 0}
     - target: {fileID: 4449351701431310970, guid: 750ae61cb27215745b633a1e60c55063,
         type: 3}
       propertyPath: m_Name
-      value: (4,0)
+      value: 4,0
       objectReference: {fileID: 0}
     - target: {fileID: 6510049687341138834, guid: 750ae61cb27215745b633a1e60c55063,
         type: 3}
@@ -1349,6 +1349,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1830579347}
+  - component: {fileID: 1830579348}
   m_Layer: 0
   m_Name: World
   m_TagString: Untagged
@@ -1384,6 +1385,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1830579348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830579346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 079d8c390a510f140a6d8183ba84863c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2013064819
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1393,12 +1406,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2122736067, guid: 750ae61cb27215745b633a1e60c55063, type: 3}
       propertyPath: m_Text
-      value: (3,3)
+      value: 3,3
       objectReference: {fileID: 0}
     - target: {fileID: 4449351701431310970, guid: 750ae61cb27215745b633a1e60c55063,
         type: 3}
       propertyPath: m_Name
-      value: (3,3)
+      value: 3,3
       objectReference: {fileID: 0}
     - target: {fileID: 6510049687341138834, guid: 750ae61cb27215745b633a1e60c55063,
         type: 3}
@@ -1472,12 +1485,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2122736067, guid: 750ae61cb27215745b633a1e60c55063, type: 3}
       propertyPath: m_Text
-      value: (6,1)
+      value: 6,1
       objectReference: {fileID: 0}
     - target: {fileID: 4449351701431310970, guid: 750ae61cb27215745b633a1e60c55063,
         type: 3}
       propertyPath: m_Name
-      value: (6,1)
+      value: 6,1
       objectReference: {fileID: 0}
     - target: {fileID: 6510049687341138834, guid: 750ae61cb27215745b633a1e60c55063,
         type: 3}
