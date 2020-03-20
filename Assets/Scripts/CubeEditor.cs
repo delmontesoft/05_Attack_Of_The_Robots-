@@ -4,40 +4,44 @@ using UnityEngine;
 
 [ExecuteInEditMode]     //to add functionality executable on the edit mode
 [SelectionBase]         //to force the selection of the object this script is attached to when selecting any part of the object on the editor
+[RequireComponent(typeof(Waypoint))]
+
 public class CubeEditor : MonoBehaviour
 {
-    [SerializeField][Range(1,20)] int gridSize = 10;
+    //[SerializeField][Range(1,20)] int gridSize = 10;  // should not be variable between cubes!
 
-    TextMesh textMesh;
+    Waypoint waypoint;
+
+    private void Awake()
+    {
+        waypoint = GetComponent<Waypoint>();
+    }
 
     // Update is called once per frame
     void Update()
     {
         SnapCubeToGrid();
 
-        UpdateCoordText();
+        UpdateCubeLabel();
     }
 
     private void SnapCubeToGrid()
     {
-        Vector3 snapPosition;
-
-        snapPosition.x = Mathf.RoundToInt(transform.position.x / gridSize) * gridSize;
-        snapPosition.y = 0f;                                                            //keep the cube always on the ground
-        snapPosition.z = Mathf.RoundToInt(transform.position.z / gridSize) * gridSize;
-        transform.position = snapPosition;
+        transform.position = new Vector3(
+            waypoint.GetGridPos().x,
+            0f,
+            waypoint.GetGridPos().y);
     }
 
-    private void UpdateCoordText()
+    private void UpdateCubeLabel()
     {
-        string coordText;
+        int gridSize = waypoint.GetGridSize();
+        string posText;
+        posText = waypoint.GetGridPos().x / gridSize + "," + waypoint.GetGridPos().y / gridSize;
 
-        coordText = "(" + transform.position.x / gridSize + "," + transform.position.z / gridSize + ")";
+        TextMesh textMesh = GetComponentInChildren<TextMesh>();
+        textMesh.text = posText;
 
-
-        textMesh = GetComponentInChildren<TextMesh>();
-        textMesh.text = coordText;
-
-        transform.name = coordText;
+        transform.name = posText;
     }
 }

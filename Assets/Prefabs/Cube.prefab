@@ -102,8 +102,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6510049687341138834}
-  - component: {fileID: 859135794}
-  - component: {fileID: 3952050660950222723}
+  - component: {fileID: 4661424098153575834}
+  - component: {fileID: -4772601506542718100}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -131,7 +131,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &859135794
+--- !u!114 &4661424098153575834
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,8 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c61fc5d7e2d4fbb4d83769d7b98fb123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridSize: 10
---- !u!114 &3952050660950222723
+--- !u!114 &-4772601506542718100
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
