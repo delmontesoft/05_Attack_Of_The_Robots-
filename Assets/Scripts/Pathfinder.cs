@@ -9,6 +9,8 @@ public class Pathfinder : MonoBehaviour
 
     Dictionary<Vector2Int, Waypoint> grid = new Dictionary<Vector2Int, Waypoint>();
     Queue<Waypoint> queue = new Queue<Waypoint>();
+    List<Waypoint> path = new List<Waypoint>();
+    Waypoint currentSearchWaypoint;
     bool isRunning = true;
 
     Vector2Int[] searchDirections = 
@@ -19,61 +21,14 @@ public class Pathfinder : MonoBehaviour
         Vector2Int.left
     };
 
-    // Start is called before the first frame update
-    void Start()
+    public List<Waypoint> GetPath()
     {
         LoadWaypoints();
         SetStartAndEndColor();
-        Pathfind();
-    }
+        BreadthFirstSearch();
+        CreatePath();
 
-    private void Pathfind()
-    {
-        queue.Enqueue(startWaypoint);
-         
-        while ((queue.Count > 0) && isRunning)
-        {
-            Waypoint searchWaypoint = queue.Dequeue();
-            searchWaypoint.isExplored = true;
-            print("Searching @ " + searchWaypoint);     //TODO remove later
-            HaltIfEndFound(searchWaypoint);
-            ExploreNeighbour(searchWaypoint);
-        }
-
-        print("Finished pathfinding?");
-    }
-
-    private void HaltIfEndFound(Waypoint searchWaypoint)
-    {
-        if (searchWaypoint == endWaypoint)
-        {
-            print("Searching from endpoint, so we stop the search");    //TODO remove later
-            isRunning = false;
-        }
-    }
-
-    private void ExploreNeighbour(Waypoint currentSearchWaypoint)
-    {
-        if (!isRunning) { return; }
-
-        foreach (Vector2Int direction in searchDirections)
-        {
-            Vector2Int neighbourCoordinates = currentSearchWaypoint.GetGridPos() + direction;
-            try
-            {
-                QueueNewNeighbours(neighbourCoordinates);
-
-            } catch
-            {
-                // do nothing for now
-            }
-        }
-    }
-
-    private void SetStartAndEndColor()
-    {
-        startWaypoint.SetTopColor(Color.green);
-        endWaypoint.SetTopColor(Color.red);
+        return path;
     }
 
     private void LoadWaypoints()
@@ -93,6 +48,49 @@ public class Pathfinder : MonoBehaviour
         }
     }
 
+    private void SetStartAndEndColor()
+    {
+        startWaypoint.SetTopColor(Color.green);
+        endWaypoint.SetTopColor(Color.red);
+    }
+
+    private void BreadthFirstSearch()
+    {
+        queue.Enqueue(startWaypoint);
+         
+        while ((queue.Count > 0) && isRunning)
+        {
+            currentSearchWaypoint = queue.Dequeue();
+            currentSearchWaypoint.isExplored = true;
+            HaltIfEndFound();
+            ExploreNeighbour();
+        }
+
+        print("Finished pathfinding?");
+    }
+
+    private void HaltIfEndFound()
+    {
+        if (currentSearchWaypoint == endWaypoint)
+        {
+            isRunning = false;
+        }
+    }
+
+    private void ExploreNeighbour()
+    {
+        if (!isRunning) { return; }
+
+        foreach (Vector2Int direction in searchDirections)
+        {
+            Vector2Int neighbourCoordinates = currentSearchWaypoint.GetGridPos() + direction;
+            if (grid.ContainsKey(neighbourCoordinates))
+            {
+                QueueNewNeighbours(neighbourCoordinates);
+            }
+        }
+    }
+
     private void QueueNewNeighbours(Vector2Int neighbourCoordinates)
     {
         Waypoint neighbour = grid[neighbourCoordinates];
@@ -100,14 +98,23 @@ public class Pathfinder : MonoBehaviour
         if (!neighbour.isExplored && !queue.Contains(neighbour))
         {
             queue.Enqueue(neighbour);
-            neighbour.SetTopColor(Color.cyan); //TODO remove later 
-            print("Adding " + neighbour + " to queue");     //TODO remove later
+            neighbour.exploredFrom = currentSearchWaypoint;
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void CreatePath()
     {
-        
+        path.Add(endWaypoint);
+        Waypoint exploredFrom = endWaypoint.exploredFrom;
+
+        while (exploredFrom != startWaypoint)
+        {
+            path.Add(exploredFrom);
+            exploredFrom = exploredFrom.exploredFrom;
+        }
+
+        path.Add(startWaypoint);
+        path.Reverse();
+
     }
 }
