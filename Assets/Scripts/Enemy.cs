@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
     [SerializeField] GameObject deathFX;
     [SerializeField] GameObject hitFX;
@@ -17,7 +17,7 @@ public class EnemyMovement : MonoBehaviour
         StartCoroutine(FollowPath(path));
     }
 
-    void OnParticleCollision(GameObject other)
+    private void OnParticleCollision(GameObject other)
     {
         ProcessHit();
 
@@ -29,10 +29,14 @@ public class EnemyMovement : MonoBehaviour
 
     private void ProcessHit()
     {
-        //scoreBoard.scoreHit(scorePerHit); //todo add scoreboard
+        //todo add scoreboard
+        //scoreBoard.scoreHit(scorePerHit); 
 
+        //todo add hit FX (maybe as subemitters)
         //GameObject hitFXInstance = Instantiate(hitFX, transform.position, Quaternion.identity);
         //hitFXInstance.transform.parent = parent;
+
+        //todo tower variable damage per hit
         hitPoints = hitPoints - 1;
     }
 

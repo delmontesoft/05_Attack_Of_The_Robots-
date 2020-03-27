@@ -39,7 +39,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2122736065}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -79,7 +79,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2122736065}
-  m_Text: 0,0
+  m_Text: -5,5
   m_OffsetZ: 0
   m_CharacterSize: 2
   m_LineSpacing: 1
@@ -102,8 +102,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6510049687341138834}
-  - component: {fileID: -502910291454630944}
-  - component: {fileID: -4772601506542718100}
+  - component: {fileID: 2753044899351607182}
+  - component: {fileID: -4014399672733516202}
   m_Layer: 0
   m_Name: EnemyCube
   m_TagString: Untagged
@@ -127,19 +127,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-502910291454630944
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4449351701431310970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c61fc5d7e2d4fbb4d83769d7b98fb123, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &-4772601506542718100
+--- !u!114 &2753044899351607182
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -153,6 +141,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isExplored: 0
   exploredFrom: {fileID: 0}
+--- !u!114 &-4014399672733516202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4449351701431310970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c61fc5d7e2d4fbb4d83769d7b98fb123, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7506920239538137428
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,7 +244,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
@@ -314,6 +314,11 @@ PrefabInstance:
     - target: {fileID: 4320373430648300, guid: eaf585f6d1c526346860421fbfbc3de4, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 23671622227395264, guid: eaf585f6d1c526346860421fbfbc3de4,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eaf585f6d1c526346860421fbfbc3de4, type: 3}

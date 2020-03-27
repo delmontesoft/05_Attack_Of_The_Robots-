@@ -23,10 +23,13 @@ public class Pathfinder : MonoBehaviour
 
     public List<Waypoint> GetPath()
     {
-        LoadWaypoints();
-        SetStartAndEndColor();
-        BreadthFirstSearch();
-        CreatePath();
+        if (path.Count == 0)
+        {
+            LoadWaypoints();
+            SetStartAndEndColor();
+            BreadthFirstSearch();
+            CreatePath();
+        }
 
         return path;
     }
@@ -65,8 +68,6 @@ public class Pathfinder : MonoBehaviour
             HaltIfEndFound();
             ExploreNeighbour();
         }
-
-        print("Finished pathfinding?");
     }
 
     private void HaltIfEndFound()

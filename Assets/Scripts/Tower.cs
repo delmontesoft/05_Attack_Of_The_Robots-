@@ -7,26 +7,41 @@ public class Tower : MonoBehaviour
 {
     [SerializeField] Transform objectToPan;
     [SerializeField] Transform targetEnemy;
+    [SerializeField] int damagePerHit = 1;
+    [SerializeField] int fireRange = 30;
 
     // Update is called once per frame
     void Update()
     {
-        objectToPan.LookAt(targetEnemy);
-
-        if (enemyInRange())
+        Transform closestEnemy = findClosestEnemy();
+        if (closestEnemy != null && enemyInRange(closestEnemy))
         {
+            objectToPan.LookAt(closestEnemy);
             ActivateTurretFire(true);
         }
-        else
-        {
+        else {
             ActivateTurretFire(false);
         }
 
     }
 
-    private bool enemyInRange()
+    private Transform findClosestEnemy()
     {
-        return true;    //todo detect if enemy is in range of fire
+        //todo change targetEnemy for the closest enemy between all enemies
+        return targetEnemy;
+    }
+
+    private bool enemyInRange(Transform targetEnemy)
+    {
+        float distanceToEnemy = Vector3.Distance(targetEnemy.position, gameObject.transform.position);
+        if (distanceToEnemy <= fireRange)
+        {
+            return true;
+        }
+        else {
+            return false;
+        }
+        
     }
 
     private void ActivateTurretFire(bool isActive)
