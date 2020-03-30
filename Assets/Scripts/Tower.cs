@@ -6,9 +6,10 @@ using UnityEngine;
 public class Tower : MonoBehaviour
 {
     [SerializeField] Transform objectToPan;
-    [SerializeField] Transform targetEnemy;
     [SerializeField] int damagePerHit = 1;
     [SerializeField] int fireRange = 30;
+
+    Transform targetEnemy;
 
     // Update is called once per frame
     void Update()
@@ -27,13 +28,26 @@ public class Tower : MonoBehaviour
 
     private Transform findClosestEnemy()
     {
-        //todo change targetEnemy for the closest enemy between all enemies
+        Enemy[] allEnemies = FindObjectsOfType<Enemy>();
+
+        float shortestDistance = 10000;
+
+        foreach (Enemy enemy in allEnemies)
+        {
+            float distanceToEnemy = Vector3.Distance(enemy.transform.position , gameObject.transform.position);
+            if (distanceToEnemy <= shortestDistance)
+            {
+                shortestDistance = distanceToEnemy;
+                targetEnemy = enemy.transform;
+            }
+        }
+
         return targetEnemy;
     }
 
     private bool enemyInRange(Transform targetEnemy)
     {
-        float distanceToEnemy = Vector3.Distance(targetEnemy.position, gameObject.transform.position);
+        float distanceToEnemy = Vector3.Distance(targetEnemy.position, gameObject.  transform.position);
         if (distanceToEnemy <= fireRange)
         {
             return true;
