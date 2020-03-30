@@ -29,4 +29,10 @@ public class Waypoint : MonoBehaviour
         MeshRenderer topMeshRenderer = transform.Find("Top").GetComponent<MeshRenderer>();
         topMeshRenderer.material.color = color;
     }
+
+    void OnMouseOver()
+    {
+        //If your mouse hovers over the GameObject with the script attached, output this message
+        print("Mouse is over " + gameObject.name);
+    }
 }

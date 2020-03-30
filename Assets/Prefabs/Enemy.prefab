@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 1774999130225215231, guid: cf90fd73a12aa7c438442d1000297b8a, type: 3}
   hitFX: {fileID: 0}
-  hitPoints: 30
+  hitPoints: 10
 --- !u!54 &403194672474695383
 Rigidbody:
   m_ObjectHideFlags: 0

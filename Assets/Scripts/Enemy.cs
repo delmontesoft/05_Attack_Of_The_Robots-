@@ -6,7 +6,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] GameObject deathFX;
-    [SerializeField] GameObject hitFX;
+    //[SerializeField] GameObject hitFX;
     [SerializeField] int hitPoints = 50;
 
     // Start is called before the first frame update
@@ -42,8 +42,9 @@ public class Enemy : MonoBehaviour
 
     private void KillEnemy()
     {
-        GameObject deathFXInstance = Instantiate(deathFX, transform.position, Quaternion.identity);
+        GameObject deathFXInstance = Instantiate(deathFX, transform.position, Quaternion.identity, transform.parent);
         Destroy(gameObject);
+        Destroy(deathFXInstance, 2f);
     }
 
     IEnumerator FollowPath(List<Waypoint> path)     //IEnumerator converts the method to a co-rutine (runs along other code)
