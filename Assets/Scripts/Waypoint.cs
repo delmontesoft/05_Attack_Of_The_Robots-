@@ -7,6 +7,7 @@ public class Waypoint : MonoBehaviour
     const int gridSize = 10;
 
     public bool isExplored = false;
+    public bool isPlaceable = true;
     public Waypoint exploredFrom;
 
     bool isStartWaypoint = false;
@@ -24,15 +25,15 @@ public class Waypoint : MonoBehaviour
             Mathf.RoundToInt(transform.position.z / gridSize));
     }
 
-    public void SetTopColor(Color color)
-    {
-        MeshRenderer topMeshRenderer = transform.Find("Top").GetComponent<MeshRenderer>();
-        topMeshRenderer.material.color = color;
-    }
-
     void OnMouseOver()
     {
-        //If your mouse hovers over the GameObject with the script attached, output this message
-        print("Mouse is over " + gameObject.name);
+        if (Input.GetMouseButtonDown(0) && isPlaceable)
+        {
+            print("Mouse is over " + gameObject.name + " and available");
+        } else if (Input.GetMouseButtonDown(0))
+        {
+            print("Mouse is over " + gameObject.name + " but is not available");
+        }
+        
     }
 }

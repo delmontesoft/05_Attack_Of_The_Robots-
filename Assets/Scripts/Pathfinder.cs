@@ -26,7 +26,6 @@ public class Pathfinder : MonoBehaviour
         if (path.Count == 0)
         {
             LoadWaypoints();
-            SetStartAndEndColor();
             BreadthFirstSearch();
             CreatePath();
         }
@@ -49,12 +48,6 @@ public class Pathfinder : MonoBehaviour
                 grid.Add(waypoint.GetGridPos(), waypoint);
             }
         }
-    }
-
-    private void SetStartAndEndColor()
-    {
-        startWaypoint.SetTopColor(Color.green);
-        endWaypoint.SetTopColor(Color.red);
     }
 
     private void BreadthFirstSearch()
@@ -105,17 +98,22 @@ public class Pathfinder : MonoBehaviour
 
     private void CreatePath()
     {
-        path.Add(endWaypoint);
-        Waypoint exploredFrom = endWaypoint.exploredFrom;
+        AddWaypointToPath(endWaypoint);
 
+        Waypoint exploredFrom = endWaypoint.exploredFrom;
         while (exploredFrom != startWaypoint)
         {
-            path.Add(exploredFrom);
+            AddWaypointToPath(exploredFrom);
             exploredFrom = exploredFrom.exploredFrom;
         }
 
-        path.Add(startWaypoint);
+        AddWaypointToPath(startWaypoint);
         path.Reverse();
+    }
 
+    private void AddWaypointToPath(Waypoint waypoint)
+    {
+        path.Add(waypoint);
+        waypoint.isPlaceable = false;
     }
 }
