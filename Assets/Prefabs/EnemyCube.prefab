@@ -102,8 +102,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6510049687341138834}
-  - component: {fileID: 2753044899351607182}
   - component: {fileID: -4014399672733516202}
+  - component: {fileID: 2753044899351607182}
   - component: {fileID: 3639311170311805486}
   m_Layer: 0
   m_Name: EnemyCube
@@ -128,20 +128,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2753044899351607182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4449351701431310970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d2a9f96b37bdf44bb8c65e7da4bec71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isExplored: 0
-  exploredFrom: {fileID: 0}
 --- !u!114 &-4014399672733516202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,6 +140,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c61fc5d7e2d4fbb4d83769d7b98fb123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2753044899351607182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4449351701431310970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d2a9f96b37bdf44bb8c65e7da4bec71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 2105162174327262683, guid: ae8b6f8b7856fe0479ad409cf0d8f534,
+    type: 3}
+  parent: {fileID: 0}
+  isExplored: 0
+  isPlaceable: 1
+  exploredFrom: {fileID: 0}
 --- !u!65 &3639311170311805486
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -46,7 +46,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToPan: {fileID: 2105885383392965087}
-  targetEnemy: {fileID: 0}
   damagePerHit: 1
   fireRange: 30
 --- !u!1001 &2105162174536548545
@@ -236,6 +235,11 @@ PrefabInstance:
       propertyPath: SubModule.enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1619166478757093168, guid: 12a96404cdc36b14e821d37ca88e4c90,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b5fdbb1d0f5374cd9925eab0238603fa, type: 2}
     - target: {fileID: 4293928271395953223, guid: 12a96404cdc36b14e821d37ca88e4c90,
         type: 3}
       propertyPath: m_Name

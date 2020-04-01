@@ -5,11 +5,12 @@ using UnityEngine;
 public class Waypoint : MonoBehaviour
 {
     const int gridSize = 10;
+    [SerializeField] Tower towerPrefab;
+    [SerializeField] [Tooltip("'Empty' Folder to spawn towers")] Transform parent;
 
     public bool isExplored = false;
     public bool isPlaceable = true;
     public Waypoint exploredFrom;
-
     bool isStartWaypoint = false;
     bool isEndWaypoint = false;
 
@@ -29,10 +30,8 @@ public class Waypoint : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && isPlaceable)
         {
-            print("Mouse is over " + gameObject.name + " and available");
-        } else if (Input.GetMouseButtonDown(0))
-        {
-            print("Mouse is over " + gameObject.name + " but is not available");
+            Instantiate(towerPrefab, transform.position, Quaternion.identity, parent);
+            isPlaceable = false;
         }
         
     }
