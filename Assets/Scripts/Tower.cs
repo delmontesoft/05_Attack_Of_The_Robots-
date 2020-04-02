@@ -9,6 +9,7 @@ public class Tower : MonoBehaviour
     [SerializeField] int damagePerHit = 1;
     [SerializeField] int fireRange = 30;
 
+    public Waypoint baseWaypoint;
     Transform targetEnemy;
 
     // Update is called once per frame
