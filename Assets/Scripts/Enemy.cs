@@ -5,8 +5,10 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] GameObject deathFX;
-    [SerializeField] ParticleSystem hitFX;
+    [SerializeField] ParticleSystem deathFXPrefab;
+    [SerializeField] ParticleSystem selfDestroyFXPrefab;
+    [SerializeField] ParticleSystem hitFXPrefab;
+    [SerializeField] float movementDelay = 2f;
     [SerializeField] int hitPoints = 50;
 
     // Start is called before the first frame update
@@ -23,23 +25,32 @@ public class Enemy : MonoBehaviour
 
         if (hitPoints <= 0)
         {
-            KillEnemy();
+            KillEnemy(true);
         }
     }
 
     private void ProcessHit()
     {
-        //todo add scoreboard
-        //todo tower variable damage per hit
+        //TODO add scoreboard
+        //TODO tower variable damage per hit
 
         hitPoints = hitPoints - 1;      
-        hitFX.Play();
+        hitFXPrefab.Play();
     }
 
-    private void KillEnemy()
+    private void KillEnemy(bool wasKilledByPlayer)
     {
-        GameObject deathFXInstance = Instantiate(deathFX, transform.position, Quaternion.identity, transform.parent);
-        Destroy(deathFXInstance, 2f);
+        ParticleSystem deathFX;
+        if (wasKilledByPlayer)
+        {
+            deathFX = Instantiate(deathFXPrefab, transform.position, Quaternion.identity, transform.parent);
+        }
+        else
+        {
+            deathFX = Instantiate(selfDestroyFXPrefab, transform.position, Quaternion.identity, transform.parent);
+        }
+
+        Destroy(deathFX.gameObject, deathFX.main.duration);
         Destroy(gameObject);
     }
 
@@ -48,7 +59,10 @@ public class Enemy : MonoBehaviour
         foreach (Waypoint waypoint in path)
         {
             transform.position = waypoint.transform.position;
-            yield return new WaitForSeconds(1f);        // yield return pause the execution of the corutine for WaitForSeconds seconds
+            yield return new WaitForSeconds(movementDelay);        // yield return pause the execution of the corutine for WaitForSeconds seconds
         }
+
+        //when reaches the end explode and do damage to player
+        KillEnemy(false);
     }
 }

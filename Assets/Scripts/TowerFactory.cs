@@ -25,19 +25,19 @@ public class TowerFactory : MonoBehaviour
     {
         var newTower = Instantiate(towerPrefab, baseWaypoint.transform.position, Quaternion.identity, transform);
 
-        baseWaypoint.isPlaceable = false;
         newTower.baseWaypoint = baseWaypoint;
+        newTower.baseWaypoint.isPlaceable = false;
         towerRingBuffer.Enqueue(newTower);
     }
 
-    private void MoveExistingTower(Waypoint baseWaypoint)
+    private void MoveExistingTower(Waypoint newbaseWaypoint)
     {
         var existingTower = towerRingBuffer.Dequeue();
 
         existingTower.baseWaypoint.isPlaceable = true;
-        existingTower.baseWaypoint = baseWaypoint;
-        existingTower.transform.position = baseWaypoint.transform.position;
+        existingTower.baseWaypoint = newbaseWaypoint;
         existingTower.baseWaypoint.isPlaceable = false;
+        existingTower.transform.position = newbaseWaypoint.transform.position;
         towerRingBuffer.Enqueue(existingTower);
     }
 }
