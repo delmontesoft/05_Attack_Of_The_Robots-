@@ -48,6 +48,7 @@ MonoBehaviour:
   objectToPan: {fileID: 2105885383392965087}
   damagePerHit: 1
   fireRange: 30
+  baseWaypoint: {fileID: 0}
 --- !u!1001 &2105162174536548545
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -234,6 +235,11 @@ PrefabInstance:
         type: 3}
       propertyPath: SubModule.enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447112636026594537, guid: 12a96404cdc36b14e821d37ca88e4c90,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 1619166478757093168, guid: 12a96404cdc36b14e821d37ca88e4c90,
         type: 3}
