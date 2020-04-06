@@ -1,0 +1,32 @@
+fileFormatVersion: 2
+guid: e4b4b6bc5186be24a9cb68e5583e58f7
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Lethal Injector
+  fontNames:
+  - Lethal Injector
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 725ea58089676bf4fa31f59c389b606a, type: 3}
+  - {fileID: 12800000, guid: c36f6e0580d88aa4c8da6f7d765df7c3, type: 3}
+  - {fileID: 12800000, guid: 7465b1c5517dde74cb0f28e12635c920, type: 3}
+  - {fileID: 12800000, guid: 617d92b61520c29429029967fc07cae3, type: 3}
+  - {fileID: 12800000, guid: c2ff50491fa25714c9eb0042b188afaa, type: 3}
+  - {fileID: 12800000, guid: 728a6b5a762ddee4d8f5a17f1b57f1b8, type: 3}
+  - {fileID: 12800000, guid: 239f0eaaf5566be41b63cb7ceb1c3c7d, type: 3}
+  - {fileID: 12800000, guid: 530f53ba2972031479756bf98a4da185, type: 3}
+  - {fileID: 12800000, guid: 048f392dadeef4743a2573541bcd0b11, type: 3}
+  - {fileID: 12800000, guid: 406ff72e487ad4445b2c8a80b604da33, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
