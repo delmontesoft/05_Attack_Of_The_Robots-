@@ -72,7 +72,7 @@ MonoBehaviour:
   deathSFX: {fileID: 8300000, guid: 3734ec87f81735b40a40a0ec75e2b742, type: 3}
   selfDestroySFX: {fileID: 8300000, guid: 36efc23eeb6ad8149be0f7dcf495f3ca, type: 3}
   movementDelay: 1
-  hitPoints: 10
+  hitPoints: 12
 --- !u!82 &-7117799052350838954
 AudioSource:
   m_ObjectHideFlags: 0
