@@ -8,6 +8,9 @@ public class Enemy : MonoBehaviour
     [SerializeField] ParticleSystem deathFXPrefab;
     [SerializeField] ParticleSystem selfDestroyFXPrefab;
     [SerializeField] ParticleSystem hitFXPrefab;
+    [SerializeField] AudioClip hitSFX;
+    [SerializeField] AudioClip deathSFX;
+    [SerializeField] AudioClip selfDestroySFX;
     [SerializeField] float movementDelay = 2f;
     [SerializeField] int hitPoints = 50;
 
@@ -31,10 +34,10 @@ public class Enemy : MonoBehaviour
 
     private void ProcessHit()
     {
-        //TODO add scoreboard
         //TODO tower variable damage per hit
 
-        hitPoints = hitPoints - 1;      
+        hitPoints = hitPoints - 1;
+        GetComponent<AudioSource>().PlayOneShot(hitSFX);
         hitFXPrefab.Play();
     }
 
@@ -43,10 +46,13 @@ public class Enemy : MonoBehaviour
         ParticleSystem deathFX;
         if (wasKilledByPlayer)
         {
+            
+            AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position);
             deathFX = Instantiate(deathFXPrefab, transform.position, Quaternion.identity, transform.parent);
         }
         else
         {
+            AudioSource.PlayClipAtPoint(selfDestroySFX, Camera.main.transform.position);
             deathFX = Instantiate(selfDestroyFXPrefab, transform.position, Quaternion.identity, transform.parent);
         }
 

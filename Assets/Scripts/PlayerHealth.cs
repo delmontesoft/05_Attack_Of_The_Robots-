@@ -26,6 +26,5 @@ public class PlayerHealth : MonoBehaviour
             //TODO do something when player loses
             print("You lose!");
         }
-        
     }
 }
